@@ -4,14 +4,17 @@
 import debug: https://github.com/narfdotpl/debug
 """
 
-import __builtin__
+try:
+    import builtins
+except ImportError:
+    import __builtin__ as builtins
 from sys import _getframe
 
 from ipdb import set_trace
 
 
 # do not forget
-old_import = __builtin__.__import__
+old_import = builtins.__import__
 
 def debug():
     # get frame
@@ -35,4 +38,4 @@ def new_import(*args, **kwargs):
     else:
         return old_import(*args, **kwargs)
 
-__builtin__.__import__ = new_import
+builtins.__import__ = new_import
