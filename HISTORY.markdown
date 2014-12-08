@@ -6,12 +6,6 @@ for [full history][].
 
   [full history]: https://github.com/narfdotpl/debug/commits/master
 
-[v0.2.1.1][]
-----------
-
- - Python 3 support.
-
-
 [v0.2.1][]
 ----------
 
